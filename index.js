@@ -41,7 +41,7 @@ wss.on("connection", (ws) => {
 
 // 載入 Service Account 憑證
 const auth = new google.auth.GoogleAuth({
-  keyFile: "service-account.json", // Service Account 檔案路徑
+  credentials: JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT),
   scopes: ["https://www.googleapis.com/auth/spreadsheets"],
 });
 
