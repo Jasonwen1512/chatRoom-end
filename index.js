@@ -3,7 +3,7 @@ const cors = require("cors"); //允許前端進行跨來源請求
 const { google } = require("googleapis");
 const SocketServer = require("ws").Server;
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // 開啟伺服器
 const server = app.listen(port, () => {
